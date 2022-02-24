@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package javaapplication11;
+import java.util.Scanner;
 
 /**
  *
@@ -49,10 +50,10 @@ public class JavaApplication11 {
     public static void main(String[] args) {
         // TODO code application logic here
         // try to get the input (myStr) from the user
-        String myStr= "SUMMER";
+        Scanner in = new Scanner(System.in);
+        String myStr= in.next();
         JavaApplication11 test1= new JavaApplication11(Seasons.valueOf(myStr));
         test1.seasonDescription();
-        //test1.isSeason();
         int ord = Seasons.valueOf(myStr).ordinal();
         System.out.println(Seasons.valueOf(myStr).ordinal());
         //a for loop that iterated thru the Seasons Enum using values() method
@@ -62,6 +63,23 @@ public class JavaApplication11 {
             System.out.println(mySeason);
         }
        
+        }
+
+        public static boolean isSeason(String s){
+
+            switch(s){
+                case "Fall":
+                    return true;
+                case "Winter":
+                    return true;
+                case "Spring":
+                    return true;
+                case "Summer":
+                    return true;
+                default:
+                    return false;
+            }
+
         }
     }
     
